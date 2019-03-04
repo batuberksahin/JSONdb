@@ -1,5 +1,6 @@
 # JSONdb
 // *Work In Progress*
+
 Simple file-base data storage
 
 ## installation
@@ -20,6 +21,7 @@ $db = new JSONdb("db.json", [
 Then you can use JSONdb methods.
 
 ***insert***
+
 Add a data to the database.
 ```php
 $db->insert([
@@ -28,6 +30,7 @@ $db->insert([
 ]);
 ```
 ***getFullContent***
+
 Get all data in database.
 ```php
 $users = $db->getFullContent();
@@ -52,6 +55,7 @@ Second name: sahin
 ```
 
 ***getContentById***
+
 Get data by id.
 ```php
 $data = $db->getContentById($_GET["id"]);
@@ -59,6 +63,7 @@ $data = $db->getContentById($_GET["id"]);
 This method returns an array.
 
 ***deleteById***
+
 Delete data by id.
 ```php
 $db->deleteById($_GET["id"]);
