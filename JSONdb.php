@@ -55,8 +55,10 @@ class JSONdb
   public function insert($content)
   {
     $data = $this->getFullContent();
+
+    if(!empty(array_diff(array_keys($content), $this->dbSchema))) throw new Exception("JSONdb error: Wrong table schema!");
+
     $insert = $content;
-    var_dump($data);
     array_push($data, $insert);
     file_put_contents($this->file, json_encode($data, true));
   }
